@@ -1,5 +1,23 @@
 import React from 'react'
 
+const videos = [
+  {
+    id: '8sqY6QXtTsI',
+    title: 'Suite de Lujo - Tour Exclusivo',
+    description: 'Descubre nuestra suite mas lujosa con vistas panoramicas'
+  },
+  {
+    id: 'WG7JxDGXpwk',
+    title: 'Vistas al Oceano',
+    description: 'Habitaciones con impresionantes vistas al mar'
+  },
+  {
+    id: 'Ozoe2X3Eco0',
+    title: 'Experiencia 360° del Hotel',
+    description: 'Recorre nuestras instalaciones en vista panoramica'
+  }
+]
+
 export function VideoSection() {
   return (
     <section className="video-section" id="video">
@@ -7,15 +25,25 @@ export function VideoSection() {
       <p className="section-subtitle">
         Descubre las instalaciones y servicios que hacen de Hotel WC el destino perfecto para tu estadia.
       </p>
-      <div className="video-container">
-        <div className="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&rel=0&modestbranding=1"
-            title="Video Hotel WC"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+      <div className="videos-grid">
+        {videos.map((video) => (
+          <div key={video.id} className="video-card">
+            <div className="video-container">
+              <div className="video-wrapper">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}?controls=1&rel=0&modestbranding=1`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+            <div className="video-info">
+              <h3>{video.title}</h3>
+              <p>{video.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )
