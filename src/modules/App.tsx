@@ -1,22 +1,22 @@
-//import React from 'react'
-import { VariablesOps } from './VariablesOps'
-import { DecisionDemo } from './DecisionDemo'
-import { LoopsDemo } from './LoopsDemo'
-import ArithmeticOps from '@/modules/ArithmeticOps'
+import React from 'react'
+import { Navbar } from './Navbar'
+import { Hero } from './Hero'
+import { RoomsSection } from './RoomsSection'
+import { PriceCalculator } from './PriceCalculator'
+import { ReservationForm } from './ReservationForm'
+import { VideoSection } from './VideoSection'
+import { Footer } from './Footer'
 
-export function App(){
+export function App() {
   return (
     <>
-      <header>
-        <h1>React + TypeScript — Variables, Decisiones, Ciclos y Aritmética</h1>
-        <p>Ejemplos prácticos de frontend con estado, eventos, render y utilidades.</p>
-      </header>
-      <main>
-        <section className="card"><VariablesOps /></section>
-        <section className="card"><DecisionDemo /></section>
-        <section className="card"><LoopsDemo /></section>
-        <section className="card"><ArithmeticOps /></section>
-      </main>
+      <Navbar />
+      <Hero />
+      <RoomsSection />
+      <PriceCalculator />
+      <ReservationForm />
+      <VideoSection />
+      <Footer />
     </>
   )
 }
