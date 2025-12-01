@@ -1,11 +1,18 @@
-# React + TypeScript — Control Flow + Arithmetic Operations
+# Hotel WC - Sistema de Cotizacion y Reservaciones
 
 ## Overview
-This is a React + TypeScript + Vite frontend application demonstrating control flow concepts and arithmetic operations in Spanish. The app showcases:
-- Variables and operations
-- Decision structures (if/switch/ternary)
-- Loops
-- Applied arithmetic with utility functions
+Hotel WC es una aplicacion web moderna desarrollada con React y TypeScript que automatiza el calculo de precios de habitaciones segun la cantidad de huespedes y dias de estadia, aplicando descuentos automaticos.
+
+### Reglas de Negocio (Caso 3)
+**Tarifas por noche:**
+- Individual (1 huesped): $2,500
+- Doble (2 huespedes): $4,600
+- Familiar (3+ huespedes): $5,200
+
+**Descuentos (sobre total con IVA 19%):**
+- 1 huesped: 5%
+- 2 huespedes: 9%
+- 3+ huespedes: 15%
 
 ## Project Architecture
 - **Build System:** Vite 5.x
@@ -15,14 +22,31 @@ This is a React + TypeScript + Vite frontend application demonstrating control f
 - **Host:** 0.0.0.0 (configured for Replit proxy)
 
 ## File Structure
-- `src/modules/` - React components
-  - `App.tsx` - Main app component
-  - `VariablesOps.tsx` - Variables and operations demo
-  - `DecisionDemo.tsx` - Decision structures demo
-  - `LoopsDemo.tsx` - Loops demo
-  - `ArithmeticOps.tsx` - Arithmetic operations with utilities
-- `src/lib/math.ts` - Math utility functions
-- `vite.config.ts` - Vite configuration (configured for Replit)
+```
+src/
+├── modules/
+│   ├── App.tsx             # Main app component
+│   ├── Navbar.tsx          # Navigation bar with logo
+│   ├── Hero.tsx            # Hero section with background image
+│   ├── RoomsSection.tsx    # Room catalog cards
+│   ├── PriceCalculator.tsx # Interactive pricing calculator
+│   ├── ReservationForm.tsx # Functional reservation form
+│   ├── VideoSection.tsx    # Promotional video embed
+│   └── Footer.tsx          # Footer with NAP info
+├── main.tsx                # Entry point
+└── styles.css              # Global styles with CSS variables
+public/
+├── favicon.png             # Hotel logo favicon
+└── images/                 # Stock images for hotel
+```
+
+## Key Features
+- Responsive design with mobile support
+- Interactive price calculator with real-time updates
+- Form validation for reservations
+- NAP (Name, Address, Phone) in footer for local SEO
+- YouTube video embed for hotel tour
+- Modern UI with custom fonts (Playfair Display, Inter)
 
 ## Development
 - Run `npm run dev` to start the development server
@@ -32,12 +56,14 @@ This is a React + TypeScript + Vite frontend application demonstrating control f
 ## Deployment
 - Build command: `npm run build`
 - Preview command: `npm run preview`
-- Deployment target: Autoscale (static frontend)
+- Deployment target: Autoscale
 
 ## Recent Changes (December 1, 2025)
-- Configured Vite for Replit environment
-  - Set server host to 0.0.0.0:5000
-  - Added allowed hosts for Replit domains
-  - Configured HMR for WebSocket over WSS
-- Set up deployment configuration
-- Installed all dependencies
+- Transformed project into Hotel WC website
+- Implemented room pricing calculator based on Caso 3 requirements
+- Added functional reservation form
+- Created responsive design with hotel branding
+- Added favicon and stock images
+- Implemented footer with NAP information
+- Added video section
+- Updated README with project documentation
