@@ -12,7 +12,7 @@ const videos = [
     description: 'Habitaciones con impresionantes vistas al mar'
   },
   {
-    id: 'dQw4w9WgXcQ',
+    id: 'Ozoe2X3Eco0',
     title: 'Experiencia 360° del Hotel',
     description: 'Recorre nuestras instalaciones en vista panoramica'
   }
